@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'bech32.dart';
 import 'exceptions.dart';
 
-/// An instance of the default implementation of the SegwitCodec
+/// An instance of the default implementation of the SegwitCodec pdcBech32
 const SegwitCodec segwit = SegwitCodec();
 
 /// A codec which converts a Segwit class to its String representation and vice versa.
@@ -98,7 +98,16 @@ class SegwitDecoder extends Converter<String, Segwit> with SegwitValidations {
 /// Generic validations for a Segwit class.
 class SegwitValidations {
   bool isInvalidHrp(String hrp) {
-    return hrp != 'pdc' && hrp != 'tpdc' && hrp != 'bc'  && hrp != 'tb';
+    if(hrp != 'pdc'){
+      return true;
+    }else if(hrp != 'tpdc'){
+      return true;
+    }else if(hrp != 'bc'){
+      return true;
+    }else if(hrp != 'tb'){
+      return true;
+    }
+    return false;
   }
 
   bool isEmptyProgram(List<int> data) {
