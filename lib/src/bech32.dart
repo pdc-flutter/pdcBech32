@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'exceptions.dart';
 
 /// An instance of the default implementation of the Bech32Codec.

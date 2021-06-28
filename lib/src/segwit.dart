@@ -99,15 +99,15 @@ class SegwitDecoder extends Converter<String, Segwit> with SegwitValidations {
 class SegwitValidations {
   bool isInvalidHrp(String hrp) {
     if(hrp != 'pdc'){
-      return true;
+      return false;
     }else if(hrp != 'tpdc'){
-      return true;
+      return false;
     }else if(hrp != 'bc'){
-      return true;
+      return false;
     }else if(hrp != 'tb'){
-      return true;
+      return false;
     }
-    return false;
+    return true;
   }
 
   bool isEmptyProgram(List<int> data) {
