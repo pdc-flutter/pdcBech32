@@ -2,6 +2,7 @@ name: pdcBech32
 version: 0.2.0
 description: Library implementing Bitcoins BIP173 (Bech32 encoding) specification in a Flutter friendly fashion.
 homepage: https://github.com/pdc-flutter/pdcBech32.git
+publish_to: none
 
 dependencies:
     convert: '>=1.0.0 <=3.0.0'
